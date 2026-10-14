@@ -1,3 +1,9 @@
+:root { scroll-behavior: smooth; }
+html, body, #root { max-width: 100%; overflow-x: hidden; }
+body { scrollbar-width: none; }
+body::-webkit-scrollbar { display: none; }
+.connectionBanner { margin: 12px auto -12px; max-width: 1120px; border: 1px solid #9b5c55; background: #2c1717; color: #ffd9d4; border-radius: 10px; padding: 10px 14px; display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.connectionBanner button { margin-left: auto; border: 1px solid #b9786e; color: #ffe9e5; background: transparent; border-radius: 6px; padding: 7px 10px; display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
 :root {
   --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --bg: #09120e;

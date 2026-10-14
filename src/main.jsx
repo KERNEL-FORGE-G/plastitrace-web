@@ -18,6 +18,7 @@ function App() {
   const [certs, setCerts] = useState([]);
   const [orgs, setOrgs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState('');
   const [selectedLot, setSelectedLot] = useState(null);
   const [lotEvents, setLotEvents] = useState([]);
   const [loadingEvents, setLoadingEvents] = useState(false);
@@ -39,6 +40,7 @@ function App() {
   const loadData = async () => {
     try {
       setLoading(true);
+      setLoadError('');
       const [lotsRes, certsRes, orgsRes] = await Promise.all([
         databases.listDocuments(DATABASE_ID, COLLECTIONS.LOTS),
         databases.listDocuments(DATABASE_ID, COLLECTIONS.CERTIFICATES),
@@ -49,6 +51,7 @@ function App() {
       setOrgs(orgsRes.documents);
     } catch (err) {
       console.error('Appwrite fetch error:', err);
+      setLoadError('La connexion au BaaS Appwrite est momentanément indisponible. Vérifiez votre réseau puis réessayez.');
     } finally {
       setLoading(false);
     }
@@ -183,6 +186,7 @@ function App() {
       </header>
 
       <main>
+        {loadError && <div className="connectionBanner" role="status"><Database size={16} /> {loadError}<button onClick={loadData}><RefreshCw size={14} /> Réessayer</button></div>}
         {/* HERO SECTION */}
         <section className="hero">
           <div className="heroText">
