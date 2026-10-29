@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hzEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="hzMint" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="60%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Icon Mark -->
+  <g transform="translate(10, 10) scale(0.273)">
+    <circle cx="256" cy="256" r="230" fill="#042316" />
+    <circle cx="256" cy="256" r="200" fill="none" stroke="#064e3b" stroke-width="4" stroke-dasharray="6 12" />
+    <path d="M 256,96 C 344,96 416,168 416,256 C 416,290 405,321 386,346 L 358,322 C 372,303 380,280 380,256 C 380,187 325,132 256,132 L 256,164 L 196,114 L 256,64 Z" fill="url(#hzMint)" />
+    <path d="M 256,416 C 168,416 96,344 96,256 C 96,222 107,191 126,166 L 154,190 C 140,209 132,232 132,256 C 132,325 187,380 256,380 L 256,348 L 316,398 L 256,448 Z" fill="url(#hzEmerald)" />
+    <polygon points="256,186 316,221 316,291 256,326 196,291 196,221" fill="#021a10" stroke="url(#hzMint)" stroke-width="7" />
+    <path d="M 256,210 C 275,230 286,255 275,275 C 265,290 245,292 236,280 C 226,268 230,240 256,210 Z" fill="url(#hzMint)" />
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="175" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="54" font-weight="900" fill="#ffffff" letter-spacing="-1">
+    PLASTI<tspan fill="#34d399">TRACE</tspan>
+  </text>
+  <text x="178" y="122" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="700" fill="#94a3b8" letter-spacing="3.5">
+    RETHINKING WASTE · CRYPTOGRAPHIC CIRCULARITY
+  </text>
+</svg>
